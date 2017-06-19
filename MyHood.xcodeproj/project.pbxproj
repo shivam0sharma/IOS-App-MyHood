@@ -12,6 +12,10 @@
 		402460851EF488F7007FF83C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 402460831EF488F7007FF83C /* Main.storyboard */; };
 		402460871EF488F7007FF83C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 402460861EF488F7007FF83C /* Assets.xcassets */; };
 		4024608A1EF488F7007FF83C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 402460881EF488F7007FF83C /* LaunchScreen.storyboard */; };
+		402460921EF489F1007FF83C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402460911EF489F1007FF83C /* Post.swift */; };
+		402460951EF48DFD007FF83C /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402460941EF48DFD007FF83C /* PostCell.swift */; };
+		402460991EF4C119007FF83C /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402460981EF4C119007FF83C /* AddPostVC.swift */; };
+		4024609C1EF5A5FC007FF83C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4024609B1EF5A5FC007FF83C /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		402460861EF488F7007FF83C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		402460891EF488F7007FF83C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4024608B1EF488F7007FF83C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		402460911EF489F1007FF83C /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		402460941EF48DFD007FF83C /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		402460981EF4C119007FF83C /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		4024609B1EF5A5FC007FF83C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		4024607E1EF488F7007FF83C /* MyHood */ = {
 			isa = PBXGroup;
 			children = (
+				4024609A1EF5A5EC007FF83C /* Services */,
+				402460931EF489FD007FF83C /* Model */,
+				402460961EF48E05007FF83C /* View */,
 				4024607F1EF488F7007FF83C /* AppDelegate.swift */,
-				402460811EF488F7007FF83C /* ViewController.swift */,
-				402460831EF488F7007FF83C /* Main.storyboard */,
+				402460971EF4C0F3007FF83C /* Controller */,
 				402460861EF488F7007FF83C /* Assets.xcassets */,
-				402460881EF488F7007FF83C /* LaunchScreen.storyboard */,
 				4024608B1EF488F7007FF83C /* Info.plist */,
 			);
 			path = MyHood;
+			sourceTree = "<group>";
+		};
+		402460931EF489FD007FF83C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				402460911EF489F1007FF83C /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		402460961EF48E05007FF83C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				402460941EF48DFD007FF83C /* PostCell.swift */,
+				402460831EF488F7007FF83C /* Main.storyboard */,
+				402460881EF488F7007FF83C /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		402460971EF4C0F3007FF83C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				402460811EF488F7007FF83C /* ViewController.swift */,
+				402460981EF4C119007FF83C /* AddPostVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4024609A1EF5A5EC007FF83C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4024609B1EF5A5FC007FF83C /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				402460921EF489F1007FF83C /* Post.swift in Sources */,
 				402460821EF488F7007FF83C /* ViewController.swift in Sources */,
+				402460991EF4C119007FF83C /* AddPostVC.swift in Sources */,
+				4024609C1EF5A5FC007FF83C /* DataService.swift in Sources */,
 				402460801EF488F7007FF83C /* AppDelegate.swift in Sources */,
+				402460951EF48DFD007FF83C /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
