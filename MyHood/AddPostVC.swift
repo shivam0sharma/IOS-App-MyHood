@@ -18,6 +18,9 @@ class AddPostVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddPostVC.dismissKeyboard))
+        view.addGestureRecognizer(tap)
 
         postImage.layer.cornerRadius = postImage.frame.size.width / 2
         postImage.clipsToBounds = true
@@ -50,5 +53,10 @@ class AddPostVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
             postImage.image = image
         }
         imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 }
